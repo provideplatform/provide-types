@@ -17,9 +17,10 @@
     "noLib": false,
     "noUnusedLocals": false,
     "noUnusedParameters": false,
-    "outDir": "dist",
+    "outDir": "dist/",
     "removeComments": true,
     "resolveJsonModule": true,
+    "rootDir": "src/",
     "skipLibCheck": true,
     "sourceMap": true,
     "strict": true,
@@ -28,5 +29,5 @@
       "./node_modules/@types",
     ]
   },
-  "include": ["src/*.ts"]
+  "include": ["**/*.ts"]
 }

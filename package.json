@@ -1,21 +1,19 @@
 {
   "name": "@provide/types",
-  "version": "1.0.0",
+  "version": "0.9.0",
   "description": "Provide common types, for TypeScript",
   "main": "dist/index.js",
-  "module": "dist/index.esm.js",
-  "types": "dist/src/index.d.ts",
-  "iife": "dist/index-iife.js",
+  "types": "dist/index.d.ts",
   "license": "MIT",
   "files": ["dist", "src"],
   "scripts": {
-    "build": "./node_modules/.bin/tsc -b . && ./node_modules/.bin/rollup -c"
+    "build": "tsc",
+    "clean": "rm -rf ./dist"
   },
   "dependencies": {
+    "ethers": "4.0.37"
   },
   "devDependencies": {
-    "rollup": "1.26.4",
-    "rollup-plugin-typescript2": "0.25.2",
 		"prettier": "1.19.1",
 		"tslint": "5.20.1",
 		"tslint-config-airbnb": "5.11.2",
