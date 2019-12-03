@@ -12,23 +12,33 @@ export class Model {
   createdAt?: string;
   errors?: Error[];
 
+  // this is not recursive
   public unmarshal(json: string): void {
     const obj = JSON.parse(json);
     for (const [key, value] of Object.entries(obj)) {
-      if (key in this) {
-        this[key] = value;
-      }
+      this[key] = value;
     }
   }
 }
 
-export function factory<T extends Model>(clazz: { new (): T }): T {
+export function factory<T extends Model | Model[]>(clazz: { new (): T }): T {
   return new clazz();
 }
 
 // tslint:disable-next-line: prettier
-export function unmarshal<T extends Model>(json: string, clazz: { new (): T }): T {
+export function unmarshal<T extends Model | Model[]>(json: string, clazz: { new (): T }): T | T[] {
+  const val = JSON.parse(json);
+  if (val instanceof Array) {
+    const arr = [];
+    (val as any[]).forEach((item: any) => {
+      const inst = factory(clazz);
+      (inst as Model).unmarshal(JSON.stringify(item));
+      (arr as any[]).push(inst);
+    });
+    return arr;
+  }
+
   const instance = factory(clazz);
-  instance.unmarshal(json);
+  (instance as Model).unmarshal(json);
   return instance;
 }
