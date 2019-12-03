@@ -71,3 +71,5 @@ dist/
 .idea
 .awcache
 .rpt2_cache
+
+tsconfig.tsbuildinfo
