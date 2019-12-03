@@ -1,17 +1,17 @@
 import { BigNumber, Model } from "../model";
 
-export type Transaction = {
-  networkId: string;
+export class Transaction extends Model {
+  networkId: string | undefined;
   contractId?: string;
   accountId?: string;
   applicationId?: string;
   userId?: string;
   signer?: string;
   to?: string;
-  value: BigNumber;
+  value: BigNumber | undefined;
   data?: string;
   hash?: string;
-  status: string;
+  status: string | undefined;
   params?: { [key: string]: any };
   ref?: string;
   description?: string;
@@ -24,4 +24,4 @@ export type Transaction = {
   publishLatecy?: number;
   broadcastLatency?: number;
   e2eLatency?: number;
-} & Model;
+}

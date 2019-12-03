@@ -1,22 +1,22 @@
 import { Model } from "../model";
 
-export type Channel = {
+export class Channel extends Model {
   paymentHubId?: string;
   applicationId?: string;
   billingAccountId?: string;
   userId?: string;
   address?: string;
   status?: string;
-  config: { [key: string]: any };
-  metadata: { [key: string]: any };
-} & Model;
+  config?: { [key: string]: any };
+  metadata: { [key: string]: any } | undefined;
+}
 
-export type Hub = {
-  networkId: string;
-  networkNodeIds: string[];
-  applicationId: string;
+export class Hub extends Model {
+  networkId: string | undefined;
+  networkNodeIds: string[] | undefined;
+  applicationId: string | undefined;
   name?: string;
-  status: string;
+  status: string | undefined;
   description?: string;
-  config: { [key: string]: any };
-} & Model;
+  config: { [key: string]: any } | undefined;
+}

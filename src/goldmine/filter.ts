@@ -1,11 +1,11 @@
 import { Model } from "../model";
 
-export type Filter = {
-  networkId: string;
+export class Filter extends Model {
+  networkId: string | undefined;
   applicationId?: string;
-  name: string;
-  priority: number;
-  lang: string;
-  source: string;
+  name: string | undefined;
+  priority: number | undefined;
+  lang: string | undefined;
+  source: string | undefined;
   params?: { [key: string]: any };
-} & Model;
+}

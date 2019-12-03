@@ -1,25 +1,25 @@
 import { Model } from "../model";
 
-export type Contract = {
-  networkId: string;
+export class Contract extends Model {
+  networkId: string | undefined;
   applicationId?: string;
   contractId?: string;
   transactionId?: string;
-  name: string;
-  address: string;
+  name: string | undefined;
+  address: string | undefined;
   params?: { [key: string]: any };
   accessedAt?: string;
-} & Model;
+}
 
-export type TokenContract = {
-  networkId: string;
+export class TokenContract extends Model {
+  networkId: string | undefined;
   applicationId?: string;
   contractId?: string;
   saleContractId?: string;
-  name: string;
-  symbol: string;
-  decimals: number;
-  address: string;
+  name: string | undefined;
+  symbol: string | undefined;
+  decimals: number | undefined;
+  address: string | undefined;
   saleAddress?: string;
   accessedAt?: string;
-} & Model;
+}

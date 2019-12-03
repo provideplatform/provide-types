@@ -1,16 +1,16 @@
 import { Model } from "../model";
 
-export type Network = {
+export class Network extends Model {
   applicationId?: string;
   networkId?: string;
   userId?: string;
-  name: string;
+  name: string | undefined;
   description?: string;
-  enabled: boolean;
+  enabled: boolean | undefined;
   chainId?: string;
   config?: { [key: string]: any };
   stats?: NetworkStats;
-} & Model;
+}
 
 export type NetworkStats = {
   block?: number;
@@ -24,8 +24,8 @@ export type NetworkStats = {
   meta?: { [key: string]: any };
 } & Model;
 
-export type Node = {
-  networkId: string;
+export class Node extends Model {
+  networkId: string | undefined;
   applicationId?: string;
   userId?: string;
   bootnode?: boolean;
@@ -35,21 +35,21 @@ export type Node = {
   privateIpv4?: string;
   privateIpv6?: string;
   description?: string;
-  role: string;
-  status: string;
+  role: string | undefined;
+  status: string | undefined;
   config?: { [key: string]: any };
-} & Model;
+}
 
-export type LoadBalancer = {
-  networkId: string;
+export class LoadBalancer extends Model {
+  networkId: string | undefined;
   applicationId?: string;
-  name: string;
-  type: string;
+  name: string | undefined;
+  type: string | undefined;
   host?: string;
   ipv4?: string;
   ipv6?: string;
   description?: string;
   region?: string;
-  status: string;
+  status: string | undefined;
   config?: { [key: string]: any };
-} & Model;
+}

@@ -1,21 +1,21 @@
 import { BigNumber, Model } from "../model";
 
-export type Account = {
+export class Account extends Model {
   networkId?: string;
   walletId?: string;
   applicationId?: string;
   userId?: string;
 
-  address: string;
+  address: string | undefined;
   hdDerivationPath?: string;
   publicKey?: string;
   privateKey?: string;
 
   balance?: BigNumber;
   accessAt?: string;
-} & Model;
+}
 
-export type Wallet = {
+export class Wallet extends Model {
   walletId?: string;
   applicationId?: string;
   userId?: string;
@@ -26,4 +26,4 @@ export type Wallet = {
   seed?: string;
   publicKey?: string;
   privateKey?: string;
-} & Model;
+}

@@ -2,21 +2,21 @@ import { Model } from "../model";
 
 import { User } from "./user";
 
-export type KycApplication = {
+export class KycApplication extends Model {
   applicationId?: string;
   userId?: string;
-  provider: string;
+  provider: string | undefined;
   identifier?: string;
-  type: string;
-  status: string;
+  type: string | undefined;
+  status: string | undefined;
   name?: string;
   description?: string;
   params?: KycApplicationParams;
-  hidden: boolean;
+  hidden: boolean = false;
   providerRepresentation?: { [key: string]: any };
   similarKycApplications?: KycApplication[];
   similarUsers?: User[];
-} & Model;
+}
 
 export type KycApplicationParams = {
   affiliateId?: string;

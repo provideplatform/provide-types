@@ -1,10 +1,10 @@
 import { Model } from "../model";
 
-export type Application = {
-  networkId: string;
-  userId: string;
-  name: string;
-  description?: string;
+export class Application extends Model {
+  networkId: string | undefined;
+  userId: string | undefined;
+  name: string | undefined;
+  description?: string | undefined;
   config?: { [key: string]: any };
-  hidden: boolean;
-} & Model;
+  hidden: boolean | undefined;
+}
