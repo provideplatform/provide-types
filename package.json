@@ -8,7 +8,7 @@
   "files": ["dist", "src"],
   "scripts": {
     "build": "tsc",
-    "clean": "rm -rf ./dist"
+    "clean": "rm -rf ./dist && rm tsconfig.tsbuildinfo || true"
   },
   "dependencies": {
     "ethers": "4.0.37"
