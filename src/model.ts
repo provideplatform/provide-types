@@ -16,9 +16,23 @@ export class Model {
   public unmarshal(json: string): void {
     const obj = JSON.parse(json);
     for (const [key, value] of Object.entries(obj)) {
-      this[key] = value;
+      this[toCamelCase(key)] = value;
     }
   }
+}
+
+function isObject(o: any): boolean {
+  return o === Object(o) && !Array.isArray(o) && typeof o !== "function";
+}
+
+function toCamelCase(str: string): string {
+  // tslint:disable-next-line: typedef
+  return str.replace(/([-_][a-z])/gi, $1 => {
+    return $1
+      .toUpperCase()
+      .replace("-", "")
+      .replace("_", "");
+  });
 }
 
 export function factory<T extends Model | Model[]>(clazz: { new (): T }): T {
