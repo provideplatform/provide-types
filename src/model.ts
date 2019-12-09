@@ -31,9 +31,7 @@ export class Model {
   public unmarshal(json: string): void {
     const obj = JSON.parse(json);
     for (const [key, value] of Object.entries(obj)) {
-      if (typeof value !== "function") {
-        obj[toSnakeCase(key)] = value;
-      }
+      this[toCamelCase(key)] = value;
     }
   }
 }
