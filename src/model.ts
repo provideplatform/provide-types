@@ -12,11 +12,28 @@ export class Model {
   createdAt?: string;
   errors?: Error[];
 
-  // this is not recursive
+  // marshal to JSON
+  public marshal(): string {
+    const obj = {};
+    for (const [key, value] of Object.entries(this)) {
+      if (typeof value !== "undefined" && typeof value !== "function") {
+        if (value instanceof Model) {
+          obj[toSnakeCase(key)] = JSON.parse(value.marshal());
+        } else {
+          obj[toSnakeCase(key)] = value;
+        }
+      }
+    }
+    return JSON.stringify(obj);
+  }
+
+  // unmarshal JSON - this is not recursive yet
   public unmarshal(json: string): void {
     const obj = JSON.parse(json);
     for (const [key, value] of Object.entries(obj)) {
-      this[toCamelCase(key)] = value;
+      if (typeof value !== "function") {
+        obj[toSnakeCase(key)] = value;
+      }
     }
   }
 }
@@ -32,6 +49,13 @@ function toCamelCase(str: string): string {
       .toUpperCase()
       .replace("-", "")
       .replace("_", "");
+  });
+}
+
+function toSnakeCase(str: string): string {
+  // tslint:disable-next-line: typedef
+  return str.replace(/[A-Z]/g, $1 => {
+    return `_${$1.toLowerCase()}`;
   });
 }
 
