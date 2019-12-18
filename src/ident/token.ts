@@ -6,5 +6,6 @@ export class Token extends Model {
   issuedAt: string | undefined;
   expiresAt?: string;
   token?: string;
+  permission: number | undefined;
   data?: { [key: string]: any };
 }

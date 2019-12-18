@@ -1,5 +1,7 @@
 import { Model } from "../model";
 
+import { Organization } from "./organization";
+
 export class Application extends Model {
   networkId: string | undefined;
   userId: string | undefined;
@@ -7,4 +9,6 @@ export class Application extends Model {
   description?: string | undefined;
   config?: { [key: string]: any };
   hidden: boolean | undefined;
+
+  organizations?: Organization[] | undefined;
 }
