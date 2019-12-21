@@ -12,6 +12,8 @@ export class Connector extends Model {
   config?: ConnectorConfig;
   accessedAt?: string;
 
+  details?: ConnectorDetails;
+
   loadBalancers?: LoadBalancer[];
   nodes?: Node[];
 }
@@ -25,4 +27,10 @@ export class ConnectorConfig extends Map<string, any> {
   region: string | undefined;
   role: string | undefined;
   targetId: string | undefined;
+}
+
+export class ConnectorDetails extends Map<string, any> {
+  page: number | undefined;
+  rpp: number | undefined;
+  data: any;
 }
