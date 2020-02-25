@@ -6,6 +6,9 @@ export class MessageData extends Model {
   dataUrl?: string;
   hash?: string;
   modifiedAt?: string;
+  filename?: string;
+  size?: number;
+  type?: string;
 }
 
 export class Message extends Model {

@@ -1,6 +1,6 @@
 {
   "name": "@provide/types",
-  "version": "0.9.8",
+  "version": "0.9.9",
   "description": "Provide common types, for TypeScript",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
