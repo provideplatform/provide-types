@@ -5,6 +5,7 @@ import { LoadBalancer, Node } from "./network";
 export class Connector extends Model {
   networkId: string | undefined;
   applicationId?: string;
+  organizationId?: string;
   name: string | undefined;
   type: string | undefined;
   status: string | undefined;
