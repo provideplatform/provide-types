@@ -1,8 +1,9 @@
 {
+  "include": ["./src/**/*"],
   "compilerOptions": {
     "allowJs": false,
     "allowSyntheticDefaultImports": true,
-    "composite": true,
+    "alwaysStrict": true,
     "declaration": true,
     "declarationMap": true,
     "emitDecoratorMetadata": true,
@@ -14,20 +15,20 @@
     "moduleResolution": "node",
     "noImplicitAny": false,
     "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noFallthroughCasesInSwitch": true,
     "noLib": false,
     "noUnusedLocals": false,
     "noUnusedParameters": false,
-    "outDir": "dist/",
+    "outDir": "./dist/cjs",
     "removeComments": true,
     "resolveJsonModule": true,
-    "rootDir": "src/",
     "skipLibCheck": true,
     "sourceMap": true,
     "strict": true,
-    "target": "es2017",
-    "typeRoots": [
-      "./node_modules/@types",
-    ]
-  },
-  "include": ["**/*.ts"]
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "strictPropertyInitialization": true,
+    "target": "es2017"
+  }
 }
