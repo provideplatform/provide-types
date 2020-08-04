@@ -1,4 +1,4 @@
-import { BigNumber, Model } from "../model";
+import { BigNumber, Model } from '../model';
 
 export type Transaction = Model & {
   networkId: string;

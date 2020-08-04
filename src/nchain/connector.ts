@@ -1,5 +1,5 @@
-import { Model } from "../model";
-import { LoadBalancer, Node } from "./network";
+import { Model } from '../model';
+import { LoadBalancer, Node } from './network';
 
 export type Connector = Model & {
   networkId: string;
@@ -16,9 +16,9 @@ export type Connector = Model & {
 
   loadBalancers?: LoadBalancer[];
   nodes?: Node[];
-}
+};
 
-export type ConnectorConfig = {
+export interface ConnectorConfig {
   container: string;
   credentials?: { [key: string]: any };
   engineId?: string;
@@ -27,10 +27,10 @@ export type ConnectorConfig = {
   region?: string;
   role?: string;
   targetId?: string;
-}
+};
 
-export type ConnectorDetails = {
+export interface ConnectorDetails {
   page?: number;
   rpp?: number;
   data: any;
-}
+};

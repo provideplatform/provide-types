@@ -1,11 +1,11 @@
-import { BigNumber as BigInt } from "ethers/utils";
+import { BigNumber as BigInt } from 'ethers/utils';
 
 export type BigNumber = BigInt;
 
-export type Error = {
+export interface Error {
   message?: string;
   status?: number;
-};
+}
 
 export class Model {
   id?: string;
@@ -16,7 +16,7 @@ export class Model {
   public marshal(): string {
     const obj = {};
     for (const [key, value] of Object.entries(this)) {
-      if (typeof value !== "undefined" && typeof value !== "function") {
+      if (typeof value !== 'undefined' && typeof value !== 'function') {
         if (value instanceof Model) {
           obj[toSnakeCase(key)] = JSON.parse(value.marshal());
         } else {
@@ -37,7 +37,7 @@ export class Model {
 }
 
 function isObject(o: any): boolean {
-  return o === Object(o) && !Array.isArray(o) && typeof o !== "function";
+  return o === Object(o) && !Array.isArray(o) && typeof o !== 'function';
 }
 
 function toCamelCase(str: string): string {
@@ -45,8 +45,8 @@ function toCamelCase(str: string): string {
   return str.replace(/([-_][a-z])/gi, $1 => {
     return $1
       .toUpperCase()
-      .replace("-", "")
-      .replace("_", "");
+      .replace('-', '')
+      .replace('_', '');
   });
 }
 
@@ -57,12 +57,12 @@ function toSnakeCase(str: string): string {
   });
 }
 
-export function factory<T extends Model | Model[]>(clazz: { new (): T }): T {
+export function factory<T extends Model | Model[]>(clazz: new () => T): T {
   return new clazz();
 }
 
 // tslint:disable-next-line: prettier
-export function unmarshal<T extends Model | Model[]>(json: string, clazz: { new (): T }): T | T[] {
+export function unmarshal<T extends Model | Model[]>(json: string, clazz: new () => T): T | T[] {
   const val = JSON.parse(json);
   if (val instanceof Array) {
     const arr = [];

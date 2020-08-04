@@ -1,4 +1,4 @@
-import { Model } from "../model";
+import { Model } from '../model';
 
 export type Contract = Model & {
   networkId: string;
@@ -9,7 +9,7 @@ export type Contract = Model & {
   address: string;
   params?: { [key: string]: any };
   accessedAt?: string;
-}
+};
 
 export type TokenContract = Model & {
   networkId: string;
@@ -22,4 +22,4 @@ export type TokenContract = Model & {
   address: string;
   saleAddress?: string;
   accessedAt?: string;
-}
+};

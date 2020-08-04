@@ -1,4 +1,4 @@
-import { Model } from "../model";
+import { Model } from '../model';
 
 export type Filter = Model & {
   networkId: string;
@@ -8,4 +8,4 @@ export type Filter = Model & {
   lang: string;
   source: string;
   params?: { [key: string]: any };
-}
+};

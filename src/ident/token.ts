@@ -1,4 +1,4 @@
-import { Model } from "../model";
+import { Model } from '../model';
 
 export type Token = Model & {
   applicationId?: string;
@@ -8,4 +8,4 @@ export type Token = Model & {
   token?: string;
   permission?: number;
   data?: { [key: string]: any };
-}
+};

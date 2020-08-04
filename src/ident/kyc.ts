@@ -1,5 +1,5 @@
-import { Model } from "../model";
-import { User } from "./user";
+import { Model } from '../model';
+import { User } from './user';
 
 export type KycApplication = Model & {
   applicationId?: string;
@@ -15,7 +15,7 @@ export type KycApplication = Model & {
   providerRepresentation?: { [key: string]: any };
   similarKycApplications?: KycApplication[];
   similarUsers?: User[];
-}
+};
 
 export type KycApplicationParams = Model & {
   affiliateId?: string;

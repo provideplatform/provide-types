@@ -1,5 +1,5 @@
-import { Model } from "../model";
-import { User } from "./user";
+import { Model } from '../model';
+import { User } from './user';
 
 export type Organization = Model & {
   name: string;
@@ -8,4 +8,4 @@ export type Organization = Model & {
   permissions?: number;
 
   users?: User[];
-}
+};

@@ -1,4 +1,4 @@
-import { Model } from "../model";
+import { Model } from '../model';
 
 export type User = Model & {
   applicationId?: string;
@@ -9,4 +9,4 @@ export type User = Model & {
   permission?: number;
   privacyPolicyAgreedAt?: string;
   termsOfServiceAgreedAt?: string;
-}
+};

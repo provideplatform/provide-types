@@ -1,5 +1,5 @@
-import { Model } from "../model";
-import { Organization } from "./organization";
+import { Model } from '../model';
+import { Organization } from './organization';
 
 export type Application = Model & {
   networkId?: string;
@@ -10,4 +10,4 @@ export type Application = Model & {
   hidden?: boolean;
 
   organizations?: Organization[];
-}
+};

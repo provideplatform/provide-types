@@ -1,4 +1,4 @@
-import { Model } from "../model";
+import { Model } from '../model';
 
 export type Key = Model & {
   vaultId: string;
@@ -9,4 +9,4 @@ export type Key = Model & {
   description?: string;
   publicKey?: string;
   address?: string;
-}
+};
