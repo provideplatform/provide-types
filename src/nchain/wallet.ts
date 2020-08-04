@@ -1,12 +1,12 @@
 import { BigNumber, Model } from "../model";
 
-export class Account extends Model {
+export type Account = Model & {
   networkId?: string;
   walletId?: string;
   applicationId?: string;
   userId?: string;
 
-  address: string | undefined;
+  address: string;
   hdDerivationPath?: string;
   publicKey?: string;
   privateKey?: string;
@@ -15,7 +15,7 @@ export class Account extends Model {
   accessAt?: string;
 }
 
-export class Wallet extends Model {
+export type Wallet = Model & {
   walletId?: string;
   applicationId?: string;
   userId?: string;

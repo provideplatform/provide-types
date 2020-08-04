@@ -1,10 +1,10 @@
 import { Model } from "../model";
 
-export class Oracle extends Model {
-  networkId: string | undefined;
+export type Oracle = Model & {
+  networkId: string;
   contractId?: string;
   applicationId?: string;
-  name: string | undefined;
+  name: string;
   feedUrl?: string;
   params?: { [key: string]: any };
 }

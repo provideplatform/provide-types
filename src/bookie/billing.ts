@@ -1,18 +1,18 @@
 import { Model } from "../model";
 
-export class BillingAccount extends Model {
-  userId: string | undefined;
+export type BillingAccount = Model & {
+  userId: string;
   nickname?: string;
   kycProvider?: string;
   kycApplicationId?: string;
   moneyServiceProvider?: string;
   identifier?: string;
   address?: string;
-  verified: boolean | undefined;
+  verified: boolean;
 }
 
-export class PaymentMethod extends Model {
-  userId: string | undefined;
+export type PaymentMethod = Model & {
+  userId: string;
   billingAccountId?: string;
   nickname?: string;
   brand?: string;
@@ -22,7 +22,7 @@ export class PaymentMethod extends Model {
   metadata?: { [key: string]: any };
 }
 
-export class RawPaymentMethod extends Model {
+export type RawPaymentMethod = Model & {
   nickname?: string;
   number?: string;
   expMonth?: number;

@@ -1,6 +1,6 @@
 import { Model } from "../model";
 
-export class Channel extends Model {
+export type Channel = Model & {
   paymentHubId?: string;
   applicationId?: string;
   billingAccountId?: string;
@@ -8,15 +8,15 @@ export class Channel extends Model {
   address?: string;
   status?: string;
   config?: { [key: string]: any };
-  metadata: { [key: string]: any } | undefined;
+  metadata?: { [key: string]: any };
 }
 
-export class Hub extends Model {
-  networkId: string | undefined;
-  networkNodeIds: string[] | undefined;
-  applicationId: string | undefined;
+export type Hub = Model & {
+  networkId?: string;
+  networkNodeIds?: string[];
+  applicationId?: string;
   name?: string;
-  status: string | undefined;
+  status?: string;
   description?: string;
-  config: { [key: string]: any } | undefined;
+  config?: { [key: string]: any };
 }

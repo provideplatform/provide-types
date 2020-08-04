@@ -1,14 +1,13 @@
 import { Model } from "../model";
-
 import { Organization } from "./organization";
 
-export class Application extends Model {
-  networkId: string | undefined;
-  userId: string | undefined;
-  name: string | undefined;
-  description?: string | undefined;
+export type Application = Model & {
+  networkId?: string;
+  userId?: string;
+  name: string;
+  description?: string;
   config?: { [key: string]: any };
-  hidden: boolean | undefined;
+  hidden?: boolean;
 
-  organizations?: Organization[] | undefined;
+  organizations?: Organization[];
 }

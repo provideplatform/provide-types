@@ -2,7 +2,7 @@ import { Model } from "../model";
 
 import { Transaction } from "./transaction";
 
-export class MessageData extends Model {
+export type MessageData = Model & {
   dataUrl?: string;
   hash?: string;
   modifiedAt?: string;
@@ -11,7 +11,7 @@ export class MessageData extends Model {
   type?: string;
 }
 
-export class Message extends Model {
+export type Message = Model & {
   data?: MessageData;
   sender?: string;
   timestamp?: string;

@@ -1,12 +1,12 @@
 import { Model } from "../model";
 
-export class User extends Model {
+export type User = Model & {
   applicationId?: string;
-  name: string | undefined;
-  firstName: string | undefined;
-  lastName: string | undefined;
-  email: string | undefined;
-  permission: number | undefined;
+  name?: string;
+  firstName: string;
+  lastName: string;
+  email: string;
+  permission?: number;
   privacyPolicyAgreedAt?: string;
   termsOfServiceAgreedAt?: string;
 }

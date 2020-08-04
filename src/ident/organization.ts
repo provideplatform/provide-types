@@ -1,12 +1,11 @@
 import { Model } from "../model";
-
 import { User } from "./user";
 
-export class Organization extends Model {
-  name: string | undefined;
-  userId: string | undefined;
-  description: string | undefined;
-  permissions: number | undefined;
+export type Organization = Model & {
+  name: string;
+  userId?: string;
+  description?: string;
+  permissions?: number;
 
-  users?: User[] | undefined;
+  users?: User[];
 }

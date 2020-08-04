@@ -1,7 +1,7 @@
 import { Model } from "../model";
 
-export class Bridge extends Model {
-  networkId: string | undefined;
+export type Bridge = Model & {
+  networkId?: string;
   applicationId?: string;
   params?: { [key: string]: any };
 }

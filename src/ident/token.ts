@@ -1,11 +1,11 @@
 import { Model } from "../model";
 
-export class Token extends Model {
+export type Token = Model & {
   applicationId?: string;
   userId?: string;
-  issuedAt: string | undefined;
+  issuedAt?: string;
   expiresAt?: string;
   token?: string;
-  permission: number | undefined;
+  permission?: number;
   data?: { [key: string]: any };
 }
