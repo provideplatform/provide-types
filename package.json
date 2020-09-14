@@ -1,6 +1,6 @@
 {
   "name": "@provide/types",
-  "version": "0.3.1",
+  "version": "0.3.0",
   "description": "Provide common types, for TypeScript",
   "license": "MIT",
   "main": "./dist/cjs/index.js",
