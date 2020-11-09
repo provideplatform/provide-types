@@ -11,6 +11,7 @@ export class Model {
   id?: string;
   createdAt?: string;
   errors?: Error[];
+  totalResultsCount?: number;
 
   // marshal to JSON
   public marshal(): string {
