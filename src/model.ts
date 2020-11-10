@@ -63,7 +63,7 @@ export function factory<T extends Model | Model[]>(clazz: new () => T): T {
 }
 
 // tslint:disable-next-line: prettier
-export function unmarshal<T extends Model | Model[]>(json: string, count: number = 0, clazz: new () => T): T | [T[], number] {
+export function unmarshal<T extends Model | Model[]>(json: string, clazz: new () => T): T | T[] {
   const val = JSON.parse(json);
   if (val instanceof Array) {
     const arr = [];
@@ -72,7 +72,7 @@ export function unmarshal<T extends Model | Model[]>(json: string, count: number
       (inst as Model).unmarshal(JSON.stringify(item));
       (arr as any[]).push(inst);
     });
-    return [arr, count];
+    return arr;
   }
 
   const instance = factory(clazz);
