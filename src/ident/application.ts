@@ -8,6 +8,7 @@ export type Application = Model & {
   description?: string;
   config?: { [key: string]: any };
   hidden?: boolean;
+  type?: string;
 
   organizations?: Organization[];
 };
