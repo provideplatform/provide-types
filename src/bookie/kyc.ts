@@ -1,5 +1,5 @@
 import { Model } from '../model';
-import { User } from './user';
+import { User } from '../ident/user';
 
 export type KycApplication = Model & {
   applicationId?: string;

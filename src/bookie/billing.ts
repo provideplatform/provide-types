@@ -9,7 +9,7 @@ export type BillingAccount = Model & {
   identifier?: string;
   address?: string;
   verified: boolean;
-}
+};
 
 export type PaymentMethod = Model & {
   userId: string;
@@ -20,7 +20,7 @@ export type PaymentMethod = Model & {
   expYear?: number;
   last4?: string;
   metadata?: { [key: string]: any };
-}
+};
 
 export type RawPaymentMethod = Model & {
   nickname?: string;
@@ -28,4 +28,4 @@ export type RawPaymentMethod = Model & {
   expMonth?: number;
   expYear?: number;
   cvc?: string;
-}
+};
