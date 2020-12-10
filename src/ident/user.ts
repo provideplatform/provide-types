@@ -6,7 +6,7 @@ export type User = Model & {
   firstName: string;
   lastName: string;
   email: string;
-  permission?: number;
+  permissions?: number;
   privacyPolicyAgreedAt?: string;
   termsOfServiceAgreedAt?: string;
 };
