@@ -7,5 +7,8 @@ export type Circuit = Model & {
   provider: string;
   type?: string;
   curve?: string;
-  constraintSystem?: string;
+  provingScheme?: string;
+  provingKeyId?: string;
+  verifyingKeyId?: string;
+  verifierContract?: object;
 };
