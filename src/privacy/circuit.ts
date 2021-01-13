@@ -1,6 +1,7 @@
 import { Model } from '../model';
 
 export type Circuit = Model & {
+  artifacts?: object;
   name: string;
   description?: string;
   identifier: string;
