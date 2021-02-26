@@ -6,6 +6,7 @@ export type Organization = Model & {
   userId?: string;
   description?: string;
   permissions?: number;
+  metadata?: { [key: string]: any };
 
   users?: User[];
 };
