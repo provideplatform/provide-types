@@ -5,3 +5,4 @@ export * from './ident';
 export * from './model';
 export * from './privacy';
 export * from './vault';
+export * from './api-client-response';
