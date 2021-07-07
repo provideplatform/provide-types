@@ -1,9 +1,9 @@
 import { Model } from '../model';
 
 enum FacilityType {
-  Dex = "dex",
+  Bank = "bank",
   Cex = "cex",
-  Bank = "bank"
+  Dex = "dex",
 }
 
 export type Agreement = Model & {
@@ -20,4 +20,4 @@ export type Facility = Model & {
   name: string;
   description: string;
   agreements?: Agreement[];
-};
+}
