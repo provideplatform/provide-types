@@ -1,6 +1,6 @@
 import { Model } from '../model';
 
-export type BusinessObject = Model & {
+export type Object = Model & {
   type: string;
   payload?: { [key: string]: any };
 };
