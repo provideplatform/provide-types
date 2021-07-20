@@ -2,7 +2,7 @@ import { ProtocolMessage } from '.';
 import { Model } from '../model';
 
 // Message is a proxy-internal wrapper for protocol message handling
-export type Message = Model & {
+export type BaselineMessage = Model & {
 	baselineId: string;
 	messageId: string;
 	payload: any;
