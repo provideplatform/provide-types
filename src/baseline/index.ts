@@ -1,5 +1,6 @@
 export * from './baseline';
 export * from './config';
+export * from './mapping';
 export * from './message';
 export * from './object';
 export * from './participant';
