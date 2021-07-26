@@ -8,6 +8,8 @@ export type Circuit = Model & {
   provider: string;
   type?: string;
   curve?: string;
+  noteStoreId?: string;
+  nullifierStoreId?: string;
   provingScheme?: string;
   provingKeyId?: string;
   verifyingKeyId?: string;
