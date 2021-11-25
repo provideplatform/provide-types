@@ -22,10 +22,3 @@ export type MappingField = Model & {
   type: string;
 }
 
-export type MappingModel = Model & {
-  description: string;
-  fields: MappingField[];
-  primaryKey: string;
-  type: string;
-}
-
