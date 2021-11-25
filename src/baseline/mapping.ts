@@ -1,20 +1,31 @@
 import { Model } from '../model';
 
-export type MappingField = Model & {
-  defaultValue?: any;
-  isPrimaryKey?: boolean;
+export type Mapping = Model & {
+  models: MappingModel[];
+  description?: string;
   name: string;
   type: string;
 }
 
 export type MappingModel = Model & {
+  description?: string;
   fields: MappingField[];
   primaryKey: string;
   type: string;
 }
 
-export type Mapping = Model & {
-  models: MappingModel[];
-  metadata?: { [key: string]: any };
+export type MappingField = Model & {
+  defaultValue?: any;
+  isPrimaryKey?: boolean;
+  name: string;
+  description?: string;
   type: string;
-};
+}
+
+export type MappingModel = Model & {
+  description: string;
+  fields: MappingField[];
+  primaryKey: string;
+  type: string;
+}
+
