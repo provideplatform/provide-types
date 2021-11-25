@@ -5,6 +5,7 @@ export type Mapping = Model & {
   description?: string;
   name: string;
   type: string;
+  workgroupId: string;
 }
 
 export type MappingModel = Model & {
