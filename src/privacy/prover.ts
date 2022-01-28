@@ -1,6 +1,6 @@
 import { Model } from '../model';
 
-export type Circuit = Model & {
+export type Prover = Model & {
   artifacts?: object;
   name: string;
   description?: string;

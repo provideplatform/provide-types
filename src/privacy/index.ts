@@ -1,2 +1,2 @@
 export * from './api';
-export * from './circuit';
+export * from './prover';
