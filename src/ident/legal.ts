@@ -1,4 +1,4 @@
-export type Legal = {
+export type LegalApiResponse = {
     content: String
     href: String
 }
