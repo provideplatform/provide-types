@@ -12,6 +12,7 @@ export type MappingModel = Model & {
   description?: string;
   fields: MappingField[];
   primaryKey: string;
+  standard?: string;
   type: string;
 }
 
