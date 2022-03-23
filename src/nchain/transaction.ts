@@ -21,7 +21,7 @@ export type Transaction = Model & {
   broadcastAt?: string;
   finalizedAt?: string;
   publishedAt?: string;
-  publishLatecy?: number;
+  publishLatency?: number;
   broadcastLatency?: number;
   e2eLatency?: number;
 }
