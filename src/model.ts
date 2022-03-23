@@ -1,4 +1,4 @@
-import { BigNumber as BigInt } from 'ethers/utils';
+import { BigNumber as BigInt } from 'ethers';
 
 export type BigNumber = BigInt;
 
