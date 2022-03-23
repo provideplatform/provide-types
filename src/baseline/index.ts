@@ -9,3 +9,4 @@ export * from './verifiable-credential';
 export * from './workflow';
 export * from './workgroup';
 export * from './workstep';
+export * from './subject-account';
