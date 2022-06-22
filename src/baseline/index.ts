@@ -14,6 +14,7 @@
  * limitations under the License.
  */
 
+export * from './analytics';
 export * from './baseline';
 export * from './config';
 export * from './mapping';
