@@ -20,8 +20,8 @@ import { Prover } from '../privacy/prover'
 
 // Workstep is a baseline workflow context
 export type Workstep = Model & {
-	id: string
-	created_at: string
+  id: string
+  created_at: string
   name: string
   cardinality: number
   deployed_at: string
@@ -40,7 +40,7 @@ export type Workstep = Model & {
   status: string
   workflow_id: string
   workstep_id: string
-	prover: Prover
-	proverId: string
-	participants: Participant[]
+  prover: Prover
+  proverId: string
+  participants: Participant[]
 }

@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-import { Model } from '../model';
+import { Model } from '../model'
 
 export type Object = Model & {
-  type: string;
-  payload?: { [key: string]: any };
-};
+  type: string
+  payload?: { [key: string]: any }
+}

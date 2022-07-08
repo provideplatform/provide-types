@@ -15,6 +15,6 @@
  */
 
 export type LegalApiResponse = {
-    content: String
-    href: String
+  content: string
+  href: string
 }

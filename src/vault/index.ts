@@ -14,6 +14,6 @@
  * limitations under the License.
  */
 
-export * from './vault';
-export * from './key';
-export * from './secret';
+export * from './vault'
+export * from './key'
+export * from './secret'
