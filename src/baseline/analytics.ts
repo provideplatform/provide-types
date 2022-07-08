@@ -1,5 +1,5 @@
 // WorkgroupDashboardAPIResponse is a general response containing data related to the current workgroup and organization context
-export interface WorkgroupAnyliticsAPIResponse {
+export interface WorkgroupAnalyticsAPIResponse {
   activity: ActivityAPIResponseItem[]
   analytics: AnalyticsAPIResponse
   participants: ParticipantAnalyticsAPIResponse
