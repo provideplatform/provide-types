@@ -14,16 +14,16 @@
  * limitations under the License.
  */
 
-import { Error } from '../model';
+import { Error } from '../model'
 
 export type ProveResponse = {
-  errors?: Error[];
-  metadata?: any;
-  proof: string;
-};
+  errors?: Error[]
+  metadata?: any
+  proof: string
+}
 
 export type VerifyResponse = {
-  errors?: Error[];
-  metadata?: any;
-  result: boolean;
-};
+  errors?: Error[]
+  metadata?: any
+  result: boolean
+}

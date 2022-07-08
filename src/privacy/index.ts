@@ -14,5 +14,5 @@
  * limitations under the License.
  */
 
-export * from './api';
-export * from './prover';
+export * from './api'
+export * from './prover'

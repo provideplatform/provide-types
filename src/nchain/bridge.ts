@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-import { Model } from '../model';
+import { Model } from '../model'
 
 export type Bridge = Model & {
-  networkId?: string;
-  applicationId?: string;
-  params?: { [key: string]: any };
-};
+  networkId?: string
+  applicationId?: string
+  params?: { [key: string]: any }
+}

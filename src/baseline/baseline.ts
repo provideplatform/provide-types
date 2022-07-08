@@ -14,17 +14,17 @@
  * limitations under the License.
  */
 
-import { Model } from '../model';
+import { Model } from '../model'
 
 export type BaselineResponse = Model & {
-  baselineId: string;
-  opcode?: string;
-  identifier?: string;
-  type?: string;
-  payload?: BaselineResponsePayload;
-};
+  baselineId: string
+  opcode?: string
+  identifier?: string
+  type?: string
+  payload?: BaselineResponsePayload
+}
 
 export type BaselineResponsePayload = Model & {
-  proof: string;
-  witness?: { [key: string]: any };
-};
+  proof: string
+  witness?: { [key: string]: any }
+}

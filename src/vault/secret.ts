@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-import { Model } from '../model';
+import { Model } from '../model'
 
 export type Secret = Model & {
-  vaultId: string;
-  type: string;
-  name: string;
-  description?: string;
-};
+  vaultId: string
+  type: string
+  name: string
+  description?: string
+}

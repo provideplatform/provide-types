@@ -16,7 +16,7 @@
 
 import { BigNumber as BigInt } from 'ethers'
 
-export type BigNumber = BigInt
+export type BigNumber = BigInt // eslint-disable-line
 
 export interface Error {
   message?: string
