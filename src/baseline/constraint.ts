@@ -14,18 +14,12 @@
  * limitations under the License.
  */
 
-export * from './analytics'
-export * from './baseline'
-export * from './config'
-export * from './mapping'
-export * from './message'
-export * from './object'
-export * from './participant'
-export * from './protocol-message'
-export * from './verifiable-credential'
-export * from './workflow'
-export * from './workgroup'
-export * from './workstep'
-export * from './subject-account'
-export * from './system'
-export * from './constraint'
+import { Model } from '../model'
+
+export type Constraint = Model & {
+  expression: string
+  executionRequirement: string
+  finalityRequirement: string
+  description?: string
+  workstepId: string
+}
