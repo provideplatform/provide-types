@@ -14,22 +14,18 @@
  * limitations under the License.
  */
 
-import { Workflow } from '.'
-import { Model } from '../model'
-
-// Context represents a collection of baseline Record instances in the context of a workflow
-export type Context = Model & {
-  baselineId: string
-  records: Record[]
-  workflow: Workflow
-  workflowId: string
-}
-
-// Record represents a link between an object in the internal system of record
-// and the external Context
-export type Record = Model & {
-  baselineId: string
-  context: Context
-  contextId: string
-  type: string
-}
+export * from './analytics'
+export * from './axiom'
+export * from './config'
+export * from './mapping'
+export * from './message'
+export * from './object'
+export * from './participant'
+export * from './protocol-message'
+export * from './verifiable-credential'
+export * from './workflow'
+export * from './workgroup'
+export * from './workstep'
+export * from './subject-account'
+export * from './system'
+export * from './constraint'

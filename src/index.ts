@@ -15,7 +15,7 @@
  */
 
 export * from './api-client'
-export * from './baseline'
+export * from './axiom'
 export * from './bookie'
 export * from './nchain'
 export * from './ident'

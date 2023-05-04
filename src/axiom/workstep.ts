@@ -14,12 +14,33 @@
  * limitations under the License.
  */
 
+import { Participant } from '.'
 import { Model } from '../model'
+import { Prover } from '../privacy/prover'
 
-// Participant is a party to a baseline workgroup or workflow context
-export type Participant = Model & {
-  address: string
-  metadata?: { [key: string]: any }
-  apiEndpoint: string
-  messagingEndpoint: string
+// Workstep is a axiom workflow context
+export type Workstep = Model & {
+  id: string
+  created_at: string
+  name: string
+  cardinality: number
+  deployed_at: string
+  metadata: {
+    prover: {
+      name: string
+      identifier: string
+      provider: string
+      proving_scheme: string
+      curve: string
+    }
+    mapping_model_id: string
+  }
+  prover_id: string
+  require_finality: boolean
+  status: string
+  workflow_id: string
+  workstep_id: string
+  prover: Prover
+  proverId: string
+  participants: Participant[]
 }

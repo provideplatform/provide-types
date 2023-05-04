@@ -14,17 +14,15 @@
  * limitations under the License.
  */
 
+import { ProtocolMessage } from '.'
 import { Model } from '../model'
 
-export type BaselineResponse = Model & {
-  baselineId: string
-  opcode?: string
-  identifier?: string
-  type?: string
-  payload?: BaselineResponsePayload
-}
-
-export type BaselineResponsePayload = Model & {
-  proof: string
-  witness?: { [key: string]: any }
+// Message is a proxy-internal wrapper for protocol message handling
+export type AxiomMessage = Model & {
+  axiomId: string
+  messageId: string
+  payload: any
+  protocolMessage: ProtocolMessage
+  status: string
+  type: string
 }

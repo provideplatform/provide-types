@@ -14,15 +14,22 @@
  * limitations under the License.
  */
 
-import { Participant, Workflow } from '.'
+import { Workflow } from '.'
 import { Model } from '../model'
 
-// Workgroup is a baseline workgroup context
-export type Workgroup = Model & {
-  participants: Participant[]
-  workflows: Workflow[]
+// Context represents a collection of axiom Record instances in the context of a workflow
+export type Context = Model & {
+  axiomId: string
+  records: Record[]
+  workflow: Workflow
+  workflowId: string
+}
 
-  privacyPolicy: any
-  securityPolicy: any
-  tokenizationPolicy: any
+// Record represents a link between an object in the internal system of record
+// and the external Context
+export type Record = Model & {
+  axiomId: string
+  context: Context
+  contextId: string
+  type: string
 }

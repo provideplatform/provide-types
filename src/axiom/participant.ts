@@ -14,15 +14,12 @@
  * limitations under the License.
  */
 
-import { ProtocolMessage } from '.'
 import { Model } from '../model'
 
-// Message is a proxy-internal wrapper for protocol message handling
-export type BaselineMessage = Model & {
-  baselineId: string
-  messageId: string
-  payload: any
-  protocolMessage: ProtocolMessage
-  status: string
-  type: string
+// Participant is a party to a axiom workgroup or workflow context
+export type Participant = Model & {
+  address: string
+  metadata?: { [key: string]: any }
+  apiEndpoint: string
+  messagingEndpoint: string
 }

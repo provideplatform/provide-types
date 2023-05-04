@@ -16,14 +16,14 @@
 
 import { Model } from '../model'
 
-export const protocolMessageOpcodeBaseline = 'BLINE'
+export const protocolMessageOpcodeAxiom = 'BLINE'
 export const protocolMessageOpcodeJoin = 'JOIN'
 export const protocolMessageOpcodeSync = 'SYNC'
 
-// ProtocolMessage is a baseline protocol message
-// see https://github.com/ethereum-oasis/baseline/blob/master/core/types/src/protocol.ts
+// ProtocolMessage is a axiom protocol message
+// see https://github.com/ethereum-oasis/axiom/blob/master/core/types/src/protocol.ts
 export type ProtocolMessage = Model & {
-  baselineId: string
+  axiomId: string
   opcode: string
   sender: string
   recipient: string
@@ -34,7 +34,7 @@ export type ProtocolMessage = Model & {
   payload: ProtocolMessagePayload
 }
 
-// ProtocolMessagePayload is a baseline protocol message payload
+// ProtocolMessagePayload is a axiom protocol message payload
 export type ProtocolMessagePayload = Model & {
   object?: { [key: string]: any }
   proof: string

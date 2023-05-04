@@ -17,7 +17,7 @@
 import { Participant, Workstep } from '.'
 import { Model } from '../model'
 
-// Workflow is a baseline workflow context
+// Workflow is a axiom workflow context
 export type Workflow = Model & {
   id: string
   created_at: string
